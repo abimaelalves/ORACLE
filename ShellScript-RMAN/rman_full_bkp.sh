@@ -44,6 +44,9 @@ exit
 EOF
 }
 
+
+find $RMANBACKUP_MOUNTPOINT1 -ctime +0 -exec rm -rf "{}" \; # removendo backup com mais de 1 dia, mantendo apenas o atual backup
+
 # Main
 
 fullBackup
